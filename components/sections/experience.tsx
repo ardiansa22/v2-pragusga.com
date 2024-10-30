@@ -6,75 +6,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { MapPin, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-
-const experiences = [
-  {
-    title: `Cloud Platform Engineer`,
-    company: `Telkomsel`,
-    period: `February 2024 - June 2024`,
-    location: `Jakarta, Indonesia`,
-    type: `Internship`,
-    current: false,
-    responsibilities: [
-      `Automated data extraction from Datadog, saving it to a database for AI-based infrastructure analysis, enhancing data processing efficiency.`,
-      `Created AWS EC2 module using Terraform, enabling consistent and automated infrastructure provisioning across environments.`,
-      `Built a platform for managing AWS account permissions, simplifying permission management and enhancing security compliance for cloud resources.`,
-    ],
-  },
-  {
-    title: `Software Engineer`,
-    company: `Tokopedia`,
-    period: `September 2023 - December 2023`,
-    location: `Jakarta, Indonesia`,
-    type: `Internship`,
-    current: false,
-    responsibilities: [
-      `Optimized prompt engineering for AI chatbot, implementing the HYDE method to enhance response relevance and improve overall user interactions.`,
-      `Refactored existing codebase, improving code readability and maintainability, making it easier for team members to collaborate and onboard.`,
-      `Developed and implemented comprehensive unit tests, ensuring higher code quality and stability, and reducing potential issues in production.`,
-    ],
-  },
-  {
-    title: `Software Engineer`,
-    company: `Dana Indonesia`,
-    period: `May 2023 - July 2023`,
-    location: `Jakarta, Indonesia`,
-    type: `Apprenticeships`,
-    current: false,
-    responsibilities: [
-      `Collaborated on Dana's fraud detection system, unifying frontend, backend, and cloud technologies to bolster 
-financial security.`,
-      `Enhanced fraud detection capabilities by integrating machine learning algorithms, resulting in a 40% reduction in 
-false positives and a 20% increase in the accuracy of fraud detection.`,
-      `Streamlined the file analysis process through cloud functions, reducing the processing time for uploaded CSV 
-files by 50%, thus enabling quicker fraud prediction.`,
-    ],
-  },
-  {
-    title: `Backend Engineer`,
-    company: `Nomura Research Institute`,
-    period: `August 2022 - May 2023`,
-    location: `Jakarta, Indonesia`,
-    type: `Internship`,
-    current: false,
-    responsibilities: [
-      `Utilized modern technologies including CQRS, event-driven development, and event store to build robust and 
-scalable backend systems, ensuring high performance and maintainability.`,
-      `Simplified the recruitment process by developing an automated system from initial testing and CV screening to 
-interview stages, resulting in a more efficient and seamless hiring process.`,
-      `Engineered an employee management system with features such as attendance tracking, leave requests, and absence 
-authorization, improving overall operational efficiency.`,
-    ],
-  },
-];
+import { EXPERIENCES } from '@/app/constants';
 
 const INITIAL_DISPLAY_COUNT = 4;
 
 const Experience = () => {
   const [showAll, setShowAll] = useState(false);
   const displayedExperiences = showAll
-    ? experiences
-    : experiences.slice(0, INITIAL_DISPLAY_COUNT);
+    ? EXPERIENCES
+    : EXPERIENCES.slice(0, INITIAL_DISPLAY_COUNT);
 
   return (
     <section id="experience" className="py-20 bg-secondary/30">
@@ -151,7 +91,7 @@ const Experience = () => {
           </AnimatePresence>
         </div>
 
-        {experiences.length > INITIAL_DISPLAY_COUNT && (
+        {EXPERIENCES.length > INITIAL_DISPLAY_COUNT && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

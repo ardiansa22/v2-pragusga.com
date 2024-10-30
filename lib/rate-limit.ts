@@ -16,6 +16,6 @@ const redis = new Redis({
 // Create a new ratelimiter that allows 5 requests per 24 hours
 export const ratelimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(5, '24 h'),
+  limiter: Ratelimit.slidingWindow(2, '4 s'),
   analytics: true,
 });

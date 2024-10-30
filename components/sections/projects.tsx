@@ -8,117 +8,7 @@ import Image from 'next/image';
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-
-const projects = [
-  {
-    title: 'Image Watermarker',
-    description:
-      'Easily create custom watermarks for your images. Adjust text, size, position, and style to personalize your watermark.',
-    images: ['/wm-banner-1.png', '/wm-banner-2.png', '/wm-banner.png'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    liveDemo: 'https://wm.pragusga.com',
-    carouselDelay: 3000, // 3 seconds
-  },
-  {
-    title: 'Resonance',
-    description:
-      'Enjoy real-time canvas animations, mood-responsive wave patterns, color therapy, and binaural beat visualization.',
-    images: ['/resonance-banner.png', '/resonance-banner-1.png'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    liveDemo: 'https://resonance.pragusga.com',
-    carouselDelay: 4000, // 4 seconds
-  },
-  {
-    title: 'Snake Game',
-    description:
-      'Play the classic Snake game. Control the snake to eat food and grow longer without hitting the walls or itself.',
-    images: ['/snake.jpeg', '/snake2.jpeg'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    sourceCode: 'https://github.com/pragusga25/snake',
-    liveDemo: 'https://snake.pragusga.com',
-    carouselDelay: 5000, // 5 seconds
-  },
-  {
-    title: 'Sudoku',
-    description:
-      'Play Sudoku online. Choose from easy, medium, and hard difficulty levels.',
-    images: ['/sudoku.png', '/sudoku2.jpeg'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    sourceCode: 'https://github.com/pragusga25/sudoku',
-    liveDemo: 'https://sudoku.pragusga.com',
-    carouselDelay: 3500, // 3.5 seconds
-  },
-  {
-    title: 'Tic Tac Toe',
-    description: 'Play Tic Tac Toe against the computer. Try to win!',
-    images: ['/tictactoe1.jpeg', '/tictactoe.jpeg'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    sourceCode: 'https://github.com/pragusga25/tictactoe',
-    liveDemo: 'https://tictactoe.pragusga.com',
-    carouselDelay: 4500, // 4.5 seconds
-  },
-  {
-    title: 'Quiz Islam',
-    description: 'Test your knowledge of Islam with this quiz app.',
-    images: ['/quiz-islam1.jpeg', '/quiz-islam2.jpeg', '/quiz-islam3.jpeg'],
-    techStack: [
-      'Typescript',
-      'React',
-      'Next.js',
-      'Tailwind CSS',
-      'Prisma',
-      'MongoDB',
-    ],
-    liveDemo: 'https://quiz-islam.pragusga.com',
-    carouselDelay: 6000, // 6 seconds
-  },
-  {
-    title: 'CariKajian',
-    description: 'Search for Islamic lectures and events in Indonesia.',
-    images: ['/carikajian.png'],
-    techStack: [
-      'Typescript',
-      'React',
-      'Next.js',
-      'Tailwind CSS',
-      'Prisma',
-      'PostgreSQL',
-    ],
-    liveDemo: 'https://carikajian.com',
-    carouselDelay: 4300, // 6 seconds
-  },
-  {
-    title: 'CryptoBot',
-    description:
-      'CryptoBot is an AI chatbot that specializes in cryptocurrency topics. Ask CryptoBot about the latest prices and can send you email!',
-    images: ['/cryptobot.jpeg'],
-    techStack: [
-      'Typescript',
-      'React',
-      'Next.js',
-      'Tailwind CSS',
-      'Google Vertex',
-    ],
-    liveDemo: 'https://cryptobot.pragusga.com',
-    carouselDelay: 3700, // 6 seconds
-  },
-  {
-    title: 'Earthquake Early Warning System (EEWS)',
-    description:
-      'The EEWS project developed a scalable, event-driven system using deep learning and Apache Kafka for real-time earthquake detection.',
-    images: ['/eews.jpeg', '/eews1.jpeg'],
-    techStack: [
-      'Python',
-      'Go',
-      'Kafka',
-      'Docker',
-      'MongoDB',
-      'Prometheus',
-      'Grafana',
-    ],
-    carouselDelay: 3200, // 6 seconds
-  },
-];
+import { PROJECTS } from '@/app/constants';
 
 const ProjectCarousel = ({
   images,
@@ -244,7 +134,7 @@ const Projects = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {PROJECTS.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
