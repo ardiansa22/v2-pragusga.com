@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
-import { cn } from "@/lib/utils";
+import { useCallback } from 'react';
+import type { Engine } from 'tsparticles-engine';
+import Particles from 'react-particles';
+import { loadSlim } from 'tsparticles-slim';
+import { cn } from '@/lib/utils';
 
 interface ParticlesProps {
   className?: string;
@@ -17,7 +17,7 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
 
   return (
     <Particles
-      className={cn("absolute inset-0 -z-10", className)}
+      className={cn('absolute inset-0 -z-10', className)}
       id="tsparticles"
       init={particlesInit}
       options={{
@@ -30,10 +30,10 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
             },
           },
           color: {
-            value: "#ea580c",
+            value: '#ea580c',
           },
           opacity: {
-            value: 0.2,
+            value: 0.4,
           },
           size: {
             value: 3,
@@ -42,17 +42,17 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
           move: {
             enable: true,
             speed: 1,
-            direction: "none",
+            direction: 'none',
             random: true,
             straight: false,
             outModes: {
-              default: "bounce",
+              default: 'bounce',
             },
           },
           links: {
             enable: true,
             distance: 150,
-            color: "#ea580c",
+            color: '#ea580c',
             opacity: 0.1,
             width: 1,
           },
@@ -61,7 +61,7 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
           events: {
             onHover: {
               enable: true,
-              mode: "grab",
+              mode: 'grab',
             },
           },
           modes: {
@@ -75,7 +75,7 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
         },
         background: {
           color: {
-            value: "transparent",
+            value: 'transparent',
           },
         },
       }}

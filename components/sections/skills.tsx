@@ -1,29 +1,65 @@
-"use client";
+'use client';
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Server, Cloud, Wrench } from 'lucide-react';
+import { Code2, Server, Cloud, Wrench, Languages } from 'lucide-react';
 
 const skillCategories = [
   {
     title: 'Frontend',
     icon: Code2,
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux', 'Vue.js'],
+    skills: [
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'HTML/CSS',
+      'Cypress',
+      'Playwright',
+    ],
   },
   {
     title: 'Backend',
     icon: Server,
-    skills: ['Node.js', 'Python', 'Java', 'PostgreSQL', 'MongoDB', 'GraphQL'],
+    skills: [
+      'Node.js',
+      'Express.js',
+      'Nest.js',
+      'Flask',
+      'FastAPI',
+      'SQL/NoSQL',
+    ],
   },
   {
     title: 'DevOps',
     icon: Cloud,
-    skills: ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Git', 'Jenkins'],
+    skills: ['Docker', 'Kubernetes', 'AWS', 'GCP', 'Azure', 'CI/CD'],
   },
   {
     title: 'Tools',
     icon: Wrench,
-    skills: ['VS Code', 'Figma', 'Postman', 'Jest', 'GitHub', 'GitLab'],
+    skills: [
+      'VS Code',
+      'Postman',
+      'Git',
+      'GitHub',
+      'Jira',
+      'Slack',
+      'Trello',
+      'Discord',
+    ],
+  },
+  {
+    title: 'Languages',
+    icon: Languages,
+    skills: [
+      'Indonesian (Native)',
+      'English',
+      'JavaScript',
+      'TypeScript',
+      'Python',
+      'Go',
+      'Java',
+    ],
   },
 ];
 
@@ -47,11 +83,12 @@ export default function Skills() {
             Technical <span className="text-primary-orange">Skills</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit that enables me to build robust and scalable applications
+            A comprehensive toolkit that enables me to build robust and scalable
+            applications
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             const halfLength = Math.ceil(category.skills.length / 2);
@@ -64,13 +101,15 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="glass rounded-xl p-6 border border-border/50 shadow-lg hover:shadow-xl transition-all bg-card/50"
+                className="glass rounded-xl p-6 border border-border/50 shadow-lg hover:shadow-xl transition-all bg-card/50 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1rem)] xl:w-[calc(30%-1rem)] min-w-[280px] max-w-[400px]"
               >
                 <div className="flex items-center mb-4">
                   <div className="p-2 rounded-lg bg-primary-orange/10">
                     <Icon className="w-6 h-6 text-primary-orange" />
                   </div>
-                  <h3 className="text-xl font-semibold ml-3">{category.title}</h3>
+                  <h3 className="text-xl font-semibold ml-3">
+                    {category.title}
+                  </h3>
                 </div>
                 <div className="grid grid-cols-2 gap-x-4">
                   {/* Left Column */}

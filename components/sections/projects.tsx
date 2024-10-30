@@ -1,23 +1,233 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Github, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Github, ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useState, useCallback, useEffect } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Description of project 1",
-    images: ["/project1-1.jpg", "/project1-2.jpg"],
-    techStack: ["React", "Node.js", "MongoDB"],
-    sourceCode: "https://github.com",
-    liveDemo: "https://demo.com",
+    title: 'Image Watermarker',
+    description:
+      'Easily create custom watermarks for your images. Adjust text, size, position, and style to personalize your watermark.',
+    images: ['/wm-banner-1.png', '/wm-banner-2.png', '/wm-banner.png'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    liveDemo: 'https://wm.pragusga.com',
+    carouselDelay: 3000, // 3 seconds
   },
-  // Add more projects as needed
+  {
+    title: 'Resonance',
+    description:
+      'Enjoy real-time canvas animations, mood-responsive wave patterns, color therapy, and binaural beat visualization.',
+    images: ['/resonance-banner.png', '/resonance-banner-1.png'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    liveDemo: 'https://resonance.pragusga.com',
+    carouselDelay: 4000, // 4 seconds
+  },
+  {
+    title: 'Snake Game',
+    description:
+      'Play the classic Snake game. Control the snake to eat food and grow longer without hitting the walls or itself.',
+    images: ['/snake.jpeg', '/snake2.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/pragusga25/snake',
+    liveDemo: 'https://snake.pragusga.com',
+    carouselDelay: 5000, // 5 seconds
+  },
+  {
+    title: 'Sudoku',
+    description:
+      'Play Sudoku online. Choose from easy, medium, and hard difficulty levels.',
+    images: ['/sudoku.png', '/sudoku2.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/pragusga25/sudoku',
+    liveDemo: 'https://sudoku.pragusga.com',
+    carouselDelay: 3500, // 3.5 seconds
+  },
+  {
+    title: 'Tic Tac Toe',
+    description: 'Play Tic Tac Toe against the computer. Try to win!',
+    images: ['/tictactoe1.jpeg', '/tictactoe.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/pragusga25/tictactoe',
+    liveDemo: 'https://tictactoe.pragusga.com',
+    carouselDelay: 4500, // 4.5 seconds
+  },
+  {
+    title: 'Quiz Islam',
+    description: 'Test your knowledge of Islam with this quiz app.',
+    images: ['/quiz-islam1.jpeg', '/quiz-islam2.jpeg', '/quiz-islam3.jpeg'],
+    techStack: [
+      'Typescript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'Prisma',
+      'MongoDB',
+    ],
+    liveDemo: 'https://quiz-islam.pragusga.com',
+    carouselDelay: 6000, // 6 seconds
+  },
+  {
+    title: 'CariKajian',
+    description: 'Search for Islamic lectures and events in Indonesia.',
+    images: ['/carikajian.png'],
+    techStack: [
+      'Typescript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'Prisma',
+      'PostgreSQL',
+    ],
+    liveDemo: 'https://carikajian.com',
+    carouselDelay: 4300, // 6 seconds
+  },
+  {
+    title: 'CryptoBot',
+    description:
+      'CryptoBot is an AI chatbot that specializes in cryptocurrency topics. Ask CryptoBot about the latest prices and can send you email!',
+    images: ['/cryptobot.jpeg'],
+    techStack: [
+      'Typescript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'Google Vertex',
+    ],
+    liveDemo: 'https://cryptobot.pragusga.com',
+    carouselDelay: 3700, // 6 seconds
+  },
+  {
+    title: 'Earthquake Early Warning System (EEWS)',
+    description:
+      'The EEWS project developed a scalable, event-driven system using deep learning and Apache Kafka for real-time earthquake detection.',
+    images: ['/eews.jpeg', '/eews1.jpeg'],
+    techStack: [
+      'Python',
+      'Go',
+      'Kafka',
+      'Docker',
+      'MongoDB',
+      'Prometheus',
+      'Grafana',
+    ],
+    carouselDelay: 3200, // 6 seconds
+  },
 ];
+
+const ProjectCarousel = ({
+  images,
+  title,
+  delay = 4000, // Default delay if not provided
+}: {
+  images: string[];
+  title: string;
+  delay?: number;
+}) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: 'start',
+    },
+    [Autoplay({ delay, stopOnInteraction: true })]
+  );
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect();
+    emblaApi.on('select', onSelect);
+
+    return () => {
+      emblaApi.off('select', onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  return (
+    <div className="relative group">
+      <div ref={emblaRef} className="overflow-hidden">
+        <div className="flex">
+          {images.map((image, imageIndex) => (
+            <div key={imageIndex} className="relative flex-[0_0_100%] min-w-0">
+              <div className="relative aspect-video">
+                <Image
+                  src={image}
+                  alt={`${title} screenshot ${imageIndex + 1}`}
+                  fill
+                  className="object-cover"
+                  priority={imageIndex === 0}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Custom Navigation Arrows */}
+      <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-8 w-8 rounded-full bg-background/80 hover:bg-background border border-primary-orange/50 hover:border-primary-orange"
+          onClick={scrollPrev}
+        >
+          <ArrowLeft className="h-4 w-4 text-primary-orange" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-8 w-8 rounded-full bg-background/80 hover:bg-background border border-primary-orange/50 hover:border-primary-orange"
+          onClick={scrollNext}
+        >
+          <ArrowRight className="h-4 w-4 text-primary-orange" />
+        </Button>
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+        {images.map((_, dotIndex) => (
+          <button
+            key={dotIndex}
+            onClick={() => scrollTo(dotIndex)}
+            className={`h-1.5 rounded-full transition-all duration-300 
+              ${
+                selectedIndex === dotIndex
+                  ? 'w-3 bg-primary-orange'
+                  : 'w-1.5 bg-primary-orange/50 hover:bg-primary-orange'
+              }`}
+            aria-label={`Go to slide ${dotIndex + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Projects = () => {
   return (
@@ -43,31 +253,20 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 hover:border-primary-orange/50 group">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {project.images.map((image, imageIndex) => (
-                      <CarouselItem key={imageIndex}>
-                        <div className="relative aspect-video">
-                          <Image
-                            src={image}
-                            alt={`${project.title} screenshot ${imageIndex + 1}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="text-primary-orange hover:bg-primary-orange/20" />
-                  <CarouselNext className="text-primary-orange hover:bg-primary-orange/20" />
-                </Carousel>
+                <ProjectCarousel
+                  images={project.images}
+                  title={project.title}
+                  delay={project.carouselDelay}
+                />
 
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-orange transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.techStack.map((tech, techIndex) => (
                       <span
@@ -80,22 +279,40 @@ const Projects = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-4">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="flex-1 min-w-[140px] hover:bg-primary-orange hover:text-white border-primary-orange/50"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Source Code
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="flex-1 min-w-[140px] hover:bg-primary-orange hover:text-white border-primary-orange/50"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
+                    {project.sourceCode && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 min-w-[140px] hover:bg-primary-orange hover:text-white border-primary-orange/50"
+                        asChild
+                      >
+                        <a
+                          href={project.sourceCode}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Source Code
+                        </a>
+                      </Button>
+                    )}
+                    {project.liveDemo && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 min-w-[140px] hover:bg-primary-orange hover:text-white border-primary-orange/50"
+                        asChild
+                      >
+                        <a
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Card>

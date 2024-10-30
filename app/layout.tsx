@@ -5,28 +5,70 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { GoToTop } from '@/components/go-to-top';
+import { Toaster } from '@/components/ui/toaster';
+import { ScrollProgress } from '@/components/scroll-progress';
+import Banner from '../public/banner.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Software Engineer',
-  description: 'Professional portfolio showcasing software engineering projects and experience',
-  keywords: ['software engineer', 'full-stack developer', 'web development', 'portfolio'],
-  authors: [{ name: 'Your Name' }],
+  title: 'Taufik Pragusga | Software Engineer',
+  description:
+    'Professional portfolio of Taufik Pragusga, a software engineer specializing in full-stack development',
+  keywords: [
+    'Taufik Pragusga',
+    'software engineer',
+    'full-stack developer',
+    'web development',
+    'portfolio',
+  ],
+  authors: [{ name: 'Taufik Pragusga' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://your-domain.com',
-    title: 'Portfolio | Software Engineer',
-    description: 'Professional portfolio showcasing software engineering projects and experience',
-    siteName: 'Portfolio',
+    url: 'https://pragusga.com',
+    title: 'Taufik Pragusga | Software Engineer',
+    description:
+      'Professional portfolio of Taufik Pragusga, a software engineer specializing in full-stack development',
+    siteName: 'Taufik Pragusga Portfolio',
+    images: [
+      {
+        url: Banner.src,
+        width: 1200,
+        height: 630,
+        alt: 'Taufik Pragusga - Software Engineer',
+      },
+    ],
+    countryName: 'Indonesia',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | Software Engineer',
-    description: 'Professional portfolio showcasing software engineering projects and experience',
-    creator: '@yourusername',
+    title: 'Taufik Pragusga | Software Engineer',
+    description:
+      'Professional portfolio of Taufik Pragusga, a software engineer specializing in full-stack development',
+    creator: '@pragusga',
+    images: [
+      {
+        url: Banner.src,
+        width: 1200,
+        height: 630,
+        alt: 'Taufik Pragusga - Software Engineer',
+      },
+    ],
   },
+  viewport: 'width=device-width, initial-scale=1.0',
+  abstract: 'Professional portfolio of Taufik Pragusga',
+  applicationName: 'Taufik Pragusga Portfolio',
+  category: 'Software Engineer',
+  colorScheme: 'light dark',
+  metadataBase: new URL('https://pragusga.com'),
+  themeColor: '#ea580c',
+  creator: 'Taufik Pragusga',
+  alternates: {
+    canonical: 'https://v0.pragusga.com',
+  },
+  publisher: 'Taufik Pragusga',
+  referrer: 'no-referrer',
 };
 
 export default function RootLayout({
@@ -44,9 +86,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+          <ScrollProgress />
           <main>{children}</main>
           <Footer />
           <GoToTop />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

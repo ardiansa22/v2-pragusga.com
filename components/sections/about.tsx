@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -25,21 +25,33 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold">
                 About <span className="text-primary-orange">Me</span>
               </h2>
-              <p className="text-lg text-muted-foreground">
-                I'm a passionate software engineer with a keen eye for detail and a drive for creating impactful solutions. With expertise in both frontend and backend development, I bring ideas to life through clean, efficient code.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                My journey in tech has equipped me with a diverse skill set and the ability to tackle complex challenges head-on. I believe in writing maintainable code that scales and delivers exceptional user experiences.
-              </p>
+              <div className="text-lg text-muted-foreground space-y-4">
+                <p>
+                  Hi! I'm{' '}
+                  <span className="text-primary-orange font-semibold">
+                    Taufik Pragusga
+                  </span>
+                  , a passionate software engineer with a keen eye for detail
+                  and a drive for creating impactful solutions. With expertise
+                  in both frontend and backend development, I bring ideas to
+                  life through clean, efficient code.
+                </p>
+                <p>
+                  My journey in tech has equipped me with a diverse skill set
+                  and the ability to tackle complex challenges head-on. I
+                  believe in writing maintainable code that scales and delivers
+                  exceptional user experiences.
+                </p>
+              </div>
             </div>
-            
+
             <div className="relative">
-              <div className="aspect-square relative">
+              <div className="aspect-square relative shine-border">
                 <Image
                   src="/logo.png"
                   alt="Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain p-3"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
