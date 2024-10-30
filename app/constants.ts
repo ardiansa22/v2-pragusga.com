@@ -105,25 +105,6 @@ export const PROJECTS = [
     carouselDelay: 6000, // 6 seconds
   },
   {
-    title: 'Sudoku',
-    description:
-      'Play Sudoku online. Choose from easy, medium, and hard difficulty levels.',
-    images: ['/sudoku.png', '/sudoku2.jpeg'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    sourceCode: 'https://github.com/pragusga25/sudoku',
-    liveDemo: 'https://sudoku.pragusga.com',
-    carouselDelay: 3500, // 3.5 seconds
-  },
-  {
-    title: 'Tic Tac Toe',
-    description: 'Play Tic Tac Toe against the computer. Try to win!',
-    images: ['/tictactoe1.jpeg', '/tictactoe.jpeg'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
-    sourceCode: 'https://github.com/pragusga25/tictactoe',
-    liveDemo: 'https://tictactoe.pragusga.com',
-    carouselDelay: 4500, // 4.5 seconds
-  },
-  {
     title: 'Quiz Islam',
     description: 'Test your knowledge of Islam with this quiz app.',
     images: ['/quiz-islam1.jpeg', '/quiz-islam2.jpeg', '/quiz-islam3.jpeg'],
@@ -153,6 +134,26 @@ export const PROJECTS = [
     liveDemo: 'https://carikajian.com',
     carouselDelay: 3900, // 6 seconds
   },
+  {
+    title: 'Sudoku',
+    description:
+      'Play Sudoku online. Choose from easy, medium, and hard difficulty levels.',
+    images: ['/sudoku.png', '/sudoku2.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/pragusga25/sudoku',
+    liveDemo: 'https://sudoku.pragusga.com',
+    carouselDelay: 3500, // 3.5 seconds
+  },
+  {
+    title: 'Tic Tac Toe',
+    description: 'Play Tic Tac Toe against the computer. Try to win!',
+    images: ['/tictactoe1.jpeg', '/tictactoe.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
+    sourceCode: 'https://github.com/pragusga25/tictactoe',
+    liveDemo: 'https://tictactoe.pragusga.com',
+    carouselDelay: 4500, // 4.5 seconds
+  },
+
   {
     title: 'CryptoBot',
     description:
