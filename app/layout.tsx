@@ -8,6 +8,7 @@ import { GoToTop } from '@/components/go-to-top';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
 import Banner from '../public/banner.png';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -85,6 +86,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Analytics />
           <Navbar />
           <ScrollProgress />
           <main>{children}</main>
