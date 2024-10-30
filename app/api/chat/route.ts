@@ -43,6 +43,7 @@ Social Media:
 - LinkedIn: https://www.linkedin.com/in/pragusga
 - Twitter: https://twitter.com/pragusga
 - GitHub: https://github.com/pragusga25
+- Discord: #pragusga
 
 Location:
 - Jakarta, Indonesia
