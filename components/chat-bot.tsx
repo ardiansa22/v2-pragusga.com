@@ -32,6 +32,24 @@ export function ChatBot() {
     }
   };
 
+  const [goToTopVisible, setGoToTopVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setGoToTopVisible(true);
+      } else {
+        setGoToTopVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
   // Scroll to bottom when messages change
   useEffect(() => {
     scrollToBottom();
@@ -55,7 +73,11 @@ export function ChatBot() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'fixed h-12 w-12 rounded-full shadow-lg bg-primary-orange hover:bg-primary-orange-dark z-50 bottom-24 right-7'
+          'fixed h-12 w-12 rounded-full shadow-lg bg-primary-orange hover:bg-primary-orange-dark z-50 right-7 bottom-24 transform transition-transform',
+          goToTopVisible ? 'translate-y-0' : 'translate-y-12',
+          // Pulsing animation when closed
+          !isOpen &&
+            'after:absolute after:inset-0 after:rounded-full after:border-2 after:border-primary-orange/50 after:animate-ping'
         )}
         size="icon"
       >

@@ -2,7 +2,14 @@
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Github, ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
+import {
+  Github,
+  ExternalLink,
+  ArrowLeft,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useCallback, useEffect } from 'react';
@@ -119,7 +126,14 @@ const ProjectCarousel = ({
   );
 };
 
+const INITIAL_DISPLAY_COUNT = 6;
+
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll
+    ? PROJECTS
+    : PROJECTS.slice(0, INITIAL_DISPLAY_COUNT);
+
   return (
     <section id="projects" className="py-20">
       <div className="container px-4 mx-auto">
@@ -134,7 +148,7 @@ const Projects = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -209,6 +223,33 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {PROJECTS.length > INITIAL_DISPLAY_COUNT && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="flex justify-center mt-8"
+          >
+            <Button
+              variant="outline"
+              onClick={() => setShowAll(!showAll)}
+              className="group border-primary-orange/50 hover:bg-primary-orange hover:text-white"
+            >
+              {showAll ? (
+                <>
+                  Show Less
+                  <ChevronUp className="ml-2 h-4 w-4 group-hover:translate-y-[-2px] transition-transform" />
+                </>
+              ) : (
+                <>
+                  Show More
+                  <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-[2px] transition-transform" />
+                </>
+              )}
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

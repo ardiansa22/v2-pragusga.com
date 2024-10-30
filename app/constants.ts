@@ -89,6 +89,22 @@ export const PROJECTS = [
     carouselDelay: 5000, // 5 seconds
   },
   {
+    title: 'Earthquake Early Warning System (EEWS)',
+    description:
+      'The EEWS project developed a scalable, event-driven system using deep learning and Apache Kafka for real-time earthquake detection.',
+    images: ['/eews.jpeg', '/eews1.jpeg'],
+    techStack: [
+      'Python',
+      'Go',
+      'Kafka',
+      'Docker',
+      'MongoDB',
+      'Prometheus',
+      'Grafana',
+    ],
+    carouselDelay: 6000, // 6 seconds
+  },
+  {
     title: 'Sudoku',
     description:
       'Play Sudoku online. Choose from easy, medium, and hard difficulty levels.',
@@ -120,7 +136,7 @@ export const PROJECTS = [
       'MongoDB',
     ],
     liveDemo: 'https://quiz-islam.pragusga.com',
-    carouselDelay: 6000, // 6 seconds
+    carouselDelay: 4700, // 6 seconds
   },
   {
     title: 'CariKajian',
@@ -135,7 +151,7 @@ export const PROJECTS = [
       'PostgreSQL',
     ],
     liveDemo: 'https://carikajian.com',
-    carouselDelay: 4300, // 6 seconds
+    carouselDelay: 3900, // 6 seconds
   },
   {
     title: 'CryptoBot',
@@ -150,22 +166,6 @@ export const PROJECTS = [
       'Google Vertex',
     ],
     liveDemo: 'https://cryptobot.pragusga.com',
-    carouselDelay: 3700, // 6 seconds
-  },
-  {
-    title: 'Earthquake Early Warning System (EEWS)',
-    description:
-      'The EEWS project developed a scalable, event-driven system using deep learning and Apache Kafka for real-time earthquake detection.',
-    images: ['/eews.jpeg', '/eews1.jpeg'],
-    techStack: [
-      'Python',
-      'Go',
-      'Kafka',
-      'Docker',
-      'MongoDB',
-      'Prometheus',
-      'Grafana',
-    ],
-    carouselDelay: 3200, // 6 seconds
+    carouselDelay: 3300, // 6 seconds
   },
 ];
