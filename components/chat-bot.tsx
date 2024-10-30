@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import Markdown from 'react-markdown';
 
 export function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -130,7 +131,7 @@ export function ChatBot() {
                             : 'bg-muted'
                         )}
                       >
-                        {message.content}
+                        <Markdown>{message.content}</Markdown>
                       </div>
                     ))
                   )}
