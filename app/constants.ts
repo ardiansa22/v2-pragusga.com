@@ -135,6 +135,16 @@ export const PROJECTS = [
     carouselDelay: 3900, // 6 seconds
   },
   {
+    title: 'Adhan',
+    description:
+      'Adhan is a web app visualizing the continuous cycle of the Islamic call to prayer across global time zones.',
+    images: ['/adhan1.jpeg', '/adhan2.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'Three.js'],
+    liveDemo: 'https://adhan.pragusga.com',
+    sourceCode: 'https://github.com/pragusga25/adhan',
+    carouselDelay: 4400, // 6 seconds
+  },
+  {
     title: 'Sudoku',
     description:
       'Play Sudoku online. Choose from easy, medium, and hard difficulty levels.',
