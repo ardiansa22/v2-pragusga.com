@@ -61,6 +61,40 @@ authorization, improving overall operational efficiency.`,
 
 export const PROJECTS = [
   {
+    title: 'AI Resume Reviewer',
+    description:
+      'Get instant, professional feedback on your resume with AI-powered analysis',
+    images: [
+      '/rev0.jpeg',
+      '/rev1.jpeg',
+      '/rev2.jpeg',
+      '/rev5.jpeg',
+      '/rev3.jpeg',
+      '/rev4.jpeg',
+    ],
+    techStack: [
+      'Google Vertex',
+      'Node.js',
+      'Typescript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+    ],
+    liveDemo: 'https://resume-reviewer.pragusga.com',
+    sourceCode: 'https://github.com/pragusga25/ai-resume-reviewer',
+    carouselDelay: 3800, // 3 seconds
+  },
+  {
+    title: 'Adhan',
+    description:
+      'Adhan is a web app visualizing the continuous cycle of the Islamic call to prayer across global time zones.',
+    images: ['/adhan1.jpeg', '/adhan2.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'Three.js'],
+    liveDemo: 'https://adhan.pragusga.com',
+    sourceCode: 'https://github.com/pragusga25/adhan',
+    carouselDelay: 4400, // 6 seconds
+  },
+  {
     title: 'Image Watermarker',
     description:
       'Easily create custom watermarks for your images. Adjust text, size, position, and style to personalize your watermark.',
@@ -134,16 +168,7 @@ export const PROJECTS = [
     liveDemo: 'https://carikajian.com',
     carouselDelay: 3900, // 6 seconds
   },
-  {
-    title: 'Adhan',
-    description:
-      'Adhan is a web app visualizing the continuous cycle of the Islamic call to prayer across global time zones.',
-    images: ['/adhan1.jpeg', '/adhan2.jpeg'],
-    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'Three.js'],
-    liveDemo: 'https://adhan.pragusga.com',
-    sourceCode: 'https://github.com/pragusga25/adhan',
-    carouselDelay: 4400, // 6 seconds
-  },
+
   {
     title: 'Sudoku',
     description:
