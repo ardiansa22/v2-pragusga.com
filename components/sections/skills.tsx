@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Server, Cloud, Wrench, Languages } from 'lucide-react';
+import { Code2, Server, Cloud, Wrench, Text, Database } from 'lucide-react';
 
 const skillCategories = [
   {
@@ -15,6 +15,8 @@ const skillCategories = [
       'HTML/CSS',
       'Cypress',
       'Playwright',
+      'React Query',
+      'Redux',
     ],
   },
   {
@@ -24,15 +26,42 @@ const skillCategories = [
       'Node.js',
       'Express.js',
       'Nest.js',
+      'Fasitify',
       'Flask',
       'FastAPI',
-      'SQL/NoSQL',
+      'Django',
+      'Spring Boot',
+      'REST/GraphQL',
+      'Kafka',
     ],
   },
   {
     title: 'DevOps',
     icon: Cloud,
-    skills: ['Docker', 'Kubernetes', 'AWS', 'GCP', 'Azure', 'CI/CD'],
+    skills: [
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'GCP',
+      'Azure',
+      'CI/CD',
+      'Cloudflare',
+      'Digital Ocean',
+    ],
+  },
+  {
+    title: 'Database',
+    icon: Database,
+    skills: [
+      'PostgreSQL',
+      'MySQL',
+      'SQLite',
+      'MongoDB',
+      'Redis',
+      'DynamoDB',
+      'Elasticsearch',
+      'Pinecone',
+    ],
   },
   {
     title: 'Tools',
@@ -41,24 +70,26 @@ const skillCategories = [
       'VS Code',
       'Postman',
       'Git',
-      'GitHub',
       'Jira',
-      'Slack',
-      'Trello',
-      'Discord',
+      'Prometheus',
+      'Grafana',
+      'Datadog',
+      'Jest',
     ],
   },
+
   {
     title: 'Languages',
-    icon: Languages,
+    icon: Text,
     skills: [
-      'Indonesian (Native)',
+      'Indonesian',
       'English',
       'JavaScript',
       'TypeScript',
       'Python',
       'Go',
       'Java',
+      'Rust',
     ],
   },
 ];

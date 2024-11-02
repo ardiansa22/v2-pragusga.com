@@ -88,7 +88,7 @@ export const PROJECTS = [
     title: 'Adhan',
     description:
       'Adhan is a web app visualizing the continuous cycle of the Islamic call to prayer across global time zones.',
-    images: ['/adhan1.jpeg', '/adhan2.jpeg'],
+    images: ['/adhan3.jpeg', '/adhan4.jpeg'],
     techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'Three.js'],
     liveDemo: 'https://adhan.pragusga.com',
     sourceCode: 'https://github.com/pragusga25/adhan',
@@ -166,7 +166,7 @@ export const PROJECTS = [
       'PostgreSQL',
     ],
     liveDemo: 'https://carikajian.com',
-    carouselDelay: 3900, // 6 seconds
+    carouselDelay: 9000, // 6 seconds
   },
 
   {
