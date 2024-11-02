@@ -50,7 +50,7 @@ const skillCategories = [
     ],
   },
   {
-    title: 'Database',
+    title: 'Databases',
     icon: Database,
     skills: [
       'PostgreSQL',
