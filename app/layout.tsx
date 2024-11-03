@@ -7,7 +7,7 @@ import { Footer } from '@/components/footer';
 import { GoToTop } from '@/components/go-to-top';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
-import Banner from '../public/banner.png';
+import Banner from '../public/bannerp.jpeg';
 import { Analytics } from '@vercel/analytics/react';
 import { ChatBot } from '@/components/chat-bot';
 
