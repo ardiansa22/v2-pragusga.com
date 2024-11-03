@@ -47,9 +47,11 @@ export default function BannerPage() {
           transition={{ delay: 0.3 }}
           className="text-center mb-8"
         >
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-primary-orange to-orange-600 text-transparent bg-clip-text">
-            Taufik Pragusga
-          </h1>
+          <div className="text-6xl font-bold mb-4">
+            <h1 className="bg-gradient-to-r from-primary-orange to-orange-600 text-transparent bg-clip-text leading-tight">
+              Taufik Pragusga
+            </h1>
+          </div>
           <p className="text-2xl text-muted-foreground">
             Full-Stack Software Engineer
           </p>
