@@ -46,7 +46,7 @@ const Experience = () => {
                       : 'hover:border-primary-orange/50'
                   }`}
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div className="mb-2 md:mb-0">
                       <h3 className="text-xl font-semibold flex flex-wrap gap-2 items-center">
                         {experience.title}
