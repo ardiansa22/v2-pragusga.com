@@ -147,7 +147,7 @@ export function ChatBot() {
                       <div
                         key={message.id}
                         className={cn(
-                          'flex w-max max-w-[80%] flex-col gap-2 rounded-lg px-3 py-2 text-sm',
+                          'flex w-max max-w-[80%] flex-col gap-2 rounded-lg px-3 py-2 text-sm break-words',
                           message.role === 'user'
                             ? 'ml-auto bg-primary-orange text-white'
                             : 'bg-muted'

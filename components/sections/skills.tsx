@@ -26,7 +26,7 @@ const skillCategories = [
       'Node.js',
       'Express.js',
       'Nest.js',
-      'Fasitify',
+      'Fastify',
       'Flask',
       'FastAPI',
       'Django',
@@ -60,7 +60,7 @@ const skillCategories = [
       'Redis',
       'DynamoDB',
       'Elasticsearch',
-      'Pinecone',
+      'Firebase',
     ],
   },
   {
