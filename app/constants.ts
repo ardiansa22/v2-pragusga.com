@@ -88,7 +88,7 @@ export const PROJECTS = [
     title: 'Adhan',
     description:
       'Adhan is a web app visualizing the continuous cycle of the Islamic call to prayer across global time zones.',
-    images: ['/adhan3.jpeg', '/adhan4.jpeg'],
+    images: ['/adhand.jpeg', '/adhan3.jpeg', '/adhanw.jpeg', '/adhan4.jpeg'],
     techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'Three.js'],
     liveDemo: 'https://adhan.pragusga.com',
     sourceCode: 'https://github.com/pragusga25/adhan',
