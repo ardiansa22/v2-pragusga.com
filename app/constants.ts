@@ -61,6 +61,16 @@ authorization, improving overall operational efficiency.`,
 
 export const PROJECTS = [
   {
+    title: 'Pomodoro Focus - Stay Productive',
+    description:
+      'Boost your productivity with this elegant Pomodoro timer featuring task management and progress analytics.',
+    images: ['/pomo1.jpeg', '/pomo2.jpeg', '/pomo3.jpeg'],
+    techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'HTML5'],
+    liveDemo: 'https://pomodoro.pragusga.com',
+    sourceCode: 'https://github.com/pragusga25/pomodoro',
+    carouselDelay: 5300,
+  },
+  {
     title: 'AI Resume Reviewer',
     description:
       'Get instant, professional feedback on your resume with AI-powered analysis',
@@ -82,7 +92,7 @@ export const PROJECTS = [
     ],
     liveDemo: 'https://resume-reviewer.pragusga.com',
     sourceCode: 'https://github.com/pragusga25/ai-resume-reviewer',
-    carouselDelay: 3800, // 3 seconds
+    carouselDelay: 4500, // 3 seconds
   },
   {
     title: 'Adhan',
@@ -92,7 +102,7 @@ export const PROJECTS = [
     techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS', 'Three.js'],
     liveDemo: 'https://adhan.pragusga.com',
     sourceCode: 'https://github.com/pragusga25/adhan',
-    carouselDelay: 4400, // 6 seconds
+    carouselDelay: 6000, // 6 seconds
   },
   {
     title: 'Image Watermarker',
@@ -101,7 +111,7 @@ export const PROJECTS = [
     images: ['/wm-banner-1.png', '/wm-banner-2.png', '/wm-banner.png'],
     techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
     liveDemo: 'https://wm.pragusga.com',
-    carouselDelay: 3000, // 3 seconds
+    carouselDelay: 5500, // 3 seconds
   },
   {
     title: 'Resonance',
@@ -136,7 +146,7 @@ export const PROJECTS = [
       'Prometheus',
       'Grafana',
     ],
-    carouselDelay: 6000, // 6 seconds
+    carouselDelay: 7000, // 6 seconds
   },
   {
     title: 'Quiz Islam',
@@ -151,7 +161,7 @@ export const PROJECTS = [
       'MongoDB',
     ],
     liveDemo: 'https://quiz-islam.pragusga.com',
-    carouselDelay: 4700, // 6 seconds
+    carouselDelay: 5900, // 6 seconds
   },
   {
     title: 'CariKajian',
@@ -177,7 +187,7 @@ export const PROJECTS = [
     techStack: ['Typescript', 'React', 'Next.js', 'Tailwind CSS'],
     sourceCode: 'https://github.com/pragusga25/sudoku',
     liveDemo: 'https://sudoku.pragusga.com',
-    carouselDelay: 3500, // 3.5 seconds
+    carouselDelay: 6200, // 3.5 seconds
   },
   {
     title: 'Tic Tac Toe',
