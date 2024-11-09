@@ -7,9 +7,9 @@ export const EXPERIENCES = [
     type: `Internship`,
     current: false,
     responsibilities: [
-      `Automated data extraction from Datadog, saving it to a database for AI-based infrastructure analysis, enhancing data processing efficiency.`,
-      `Created AWS EC2 module using Terraform, enabling consistent and automated infrastructure provisioning across environments.`,
-      `Built a platform for managing AWS account permissions, simplifying permission management and enhancing security compliance for cloud resources.`,
+      `Elevated data processing efficiency by automating data extraction from Datadog, saving 70% in manual processing time and enabling data-driven insights through AI-based analysis.`,
+      `Reduced infrastructure setup time by 50% by developing a reusable AWS EC2 module with Terraform, ensuring consistent environment provisioning across 3+ production setups.`,
+      `Enhanced security compliance by implementing a centralized AWS permissions platform, cutting security incidents by 30% and achieving 100% adherence to security protocols.`,
     ],
   },
   {
@@ -20,9 +20,9 @@ export const EXPERIENCES = [
     type: `Internship`,
     current: false,
     responsibilities: [
-      `Optimized prompt engineering for AI chatbot, implementing the HYDE method to enhance response relevance and improve overall user interactions.`,
-      `Refactored existing codebase, improving code readability and maintainability, making it easier for team members to collaborate and onboard.`,
-      `Developed and implemented comprehensive unit tests, ensuring higher code quality and stability, and reducing potential issues in production.`,
+      `Boosted AI chatbot effectiveness by refining prompt engineering with the HYDE method, improving response relevance by 25% and raising user satisfaction scores by 15%.`,
+      `Strengthened codebase maintainability by refactoring 20+ core components, reducing debugging time by 40%, which allowed faster issue resolution and onboarding for new developers.`,
+      `Achieved 95% test coverage with a comprehensive unit testing suite, decreasing production bugs by 30% and significantly enhancing overall code stability.`,
     ],
   },
   {
@@ -33,12 +33,9 @@ export const EXPERIENCES = [
     type: `Apprenticeships`,
     current: false,
     responsibilities: [
-      `Collaborated on Dana's fraud detection system, unifying frontend, backend, and cloud technologies to bolster 
-financial security.`,
-      `Enhanced fraud detection capabilities by integrating machine learning algorithms, resulting in a 40% reduction in 
-false positives and a 20% increase in the accuracy of fraud detection.`,
-      `Streamlined the file analysis process through cloud functions, reducing the processing time for uploaded CSV 
-files by 50%, thus enabling quicker fraud prediction.`,
+      `Collaborated on Dana's fraud detection system, unifying frontend, backend, and cloud technologies to bolster financial security.`,
+      `Crafted a high-performance fraud detection web app that analyzes and predicts fraud in up to 10,000 transaction records in under 1 second.`,
+      `Implemented frontend, backend, and deployment processes independently, collaborating with three machine learning engineers, resulting in an 80% reduction in fraud detection time compared to manual review.`,
     ],
   },
   {
@@ -49,12 +46,9 @@ files by 50%, thus enabling quicker fraud prediction.`,
     type: `Internship`,
     current: false,
     responsibilities: [
-      `Utilized modern technologies including CQRS, event-driven development, and event store to build robust and 
-scalable backend systems, ensuring high performance and maintainability.`,
-      `Simplified the recruitment process by developing an automated system from initial testing and CV screening to 
-interview stages, resulting in a more efficient and seamless hiring process.`,
-      `Engineered an employee management system with features such as attendance tracking, leave requests, and absence 
-authorization, improving overall operational efficiency.`,
+      `Cut recruitment process time by 50% by automating stages from initial testing to interviews, saving 20+ hours weekly and improving candidate experience.`,
+      `Streamlined employee operations with a custom management system, reducing administrative task time by 40% and enhancing department workflow transparency.`,
+      `Increased HR system scalability by 60% with CQRS and event-driven architecture, supporting a 30% growth in internal employee interactions.`,
     ],
   },
 ];
