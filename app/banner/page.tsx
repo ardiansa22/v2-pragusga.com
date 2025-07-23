@@ -6,12 +6,12 @@ import Particles from '@/components/particles';
 import Link from 'next/link';
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/pragusga25' },
-  { name: 'X (Twitter)', icon: Twitter, href: 'https://twitter.com/pragusga' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/Ferian25' },
+  { name: 'X (Twitter)', icon: Twitter, href: 'https://twitter.com/Ferian' },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/in/pragusga',
+    href: 'https://linkedin.com/in/Ferian',
   },
 ];
 
@@ -21,7 +21,7 @@ export default function BannerPage() {
       <Particles className="absolute inset-0" />
 
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25px_25px,_var(--primary-orange)_2%,transparent_0%),radial-gradient(circle_at_75px_75px,_var(--primary-orange)_2%,transparent_0%)] bg-[length:100px_100px] opacity-5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25px_25px,_var(--primary-blue)_2%,transparent_0%),radial-gradient(circle_at_75px_75px,_var(--primary-blue)_2%,transparent_0%)] bg-[length:100px_100px] opacity-5" />
 
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-16">
         {/* Avatar Container */}
@@ -29,11 +29,11 @@ export default function BannerPage() {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', duration: 1 }}
-          className="mb-8 p-2 rounded-full border-2 border-primary-orange shine-border"
+          className="mb-8 p-2 rounded-full border-2 border-primary-blue shine-border"
         >
           <div className="w-32 h-32 rounded-full overflow-hidden">
             <img
-              src="https://github.com/pragusga25.png"
+              src="https://github.com/Ferian25.png"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -48,8 +48,8 @@ export default function BannerPage() {
           className="text-center mb-8"
         >
           <div className="text-6xl font-bold mb-4">
-            <h1 className="bg-gradient-to-r from-primary-orange to-orange-600 text-transparent bg-clip-text leading-tight">
-              Taufik Pragusga
+            <h1 className="bg-gradient-to-r from-primary-blue to-blue-600 text-transparent bg-clip-text leading-tight">
+              Taufik Ferian
             </h1>
           </div>
           <p className="text-2xl text-muted-foreground">
@@ -74,7 +74,7 @@ export default function BannerPage() {
           ].map((skill) => (
             <div
               key={skill}
-              className="px-6 py-2 rounded-full bg-primary-orange/10 text-primary-orange text-xl"
+              className="px-6 py-2 rounded-full bg-primary-blue/10 text-primary-blue text-xl"
             >
               {skill}
             </div>
@@ -91,12 +91,12 @@ export default function BannerPage() {
           {socialLinks.map(({ name, icon: Icon, href }) => (
             <Link
               key={name}
-              className="w-12 h-12 rounded-full bg-primary-orange/10 flex items-center justify-center"
+              className="w-12 h-12 rounded-full bg-primary-blue/10 flex items-center justify-center"
               href={href}
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Icon className="w-6 h-6 text-primary-orange" />
+              <Icon className="w-6 h-6 text-primary-blue" />
             </Link>
           ))}
         </motion.div>

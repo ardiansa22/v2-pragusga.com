@@ -64,9 +64,8 @@ export function Navbar() {
     <header className="fixed w-full top-0 z-50 border-b bg-background/80 backdrop-blur-sm">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex">
-          <Image src="/logo.png" alt="Logo" width={32} height={32} />
           <Link href="/" passHref className="text-xl ml-2 font-bold">
-            Pragusga
+            Ferian
           </Link>
         </div>
 
@@ -79,14 +78,14 @@ export function Navbar() {
                 href={item.href}
                 className={`relative py-1 transition-colors ${
                   activeSection === item.href.slice(1)
-                    ? 'text-primary-orange'
-                    : 'hover:text-primary-orange'
+                    ? 'text-primary-blue'
+                    : 'hover:text-primary-blue'
                 }`}
               >
                 {item.name}
                 {activeSection === item.href.slice(1) && (
                   <span
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-orange rounded-full"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-blue rounded-full"
                     style={{
                       animation: 'expandWidth 0.2s ease-out forwards',
                     }}
@@ -100,7 +99,7 @@ export function Navbar() {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="hover:text-primary-orange"
+            className="hover:text-primary-blue"
           >
             {theme === 'dark' ? (
               <Sun className="h-5 w-5" />
@@ -128,8 +127,8 @@ export function Navbar() {
                     href={item.href}
                     className={`text-lg transition-colors ${
                       activeSection === item.href.slice(1)
-                        ? 'text-primary-orange font-medium'
-                        : 'hover:text-primary-orange'
+                        ? 'text-primary-blue font-medium'
+                        : 'hover:text-primary-blue'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
@@ -202,7 +201,7 @@ export function Navbar() {
 //         <Link href="/" passHref className="flex">
 //           <Image src="/logo.png" alt="Logo" width={32} height={32} />
 //           <a href="#" className="text-xl ml-2 font-bold">
-//             Pragusga
+//             Ferian
 //           </a>
 //         </Link>
 
@@ -213,7 +212,7 @@ export function Navbar() {
 //               <a
 //                 key={item.name}
 //                 href={item.href}
-//                 className="hover:text-primary-orange transition-colors"
+//                 className="hover:text-primary-blue transition-colors"
 //               >
 //                 {item.name}
 //               </a>
@@ -249,7 +248,7 @@ export function Navbar() {
 //                   <a
 //                     key={item.name}
 //                     href={item.href}
-//                     className="text-lg hover:text-primary-orange transition-colors"
+//                     className="text-lg hover:text-primary-blue transition-colors"
 //                     onClick={() => setIsOpen(false)}
 //                   >
 //                     {item.name}
@@ -264,7 +263,7 @@ export function Navbar() {
 //                         href={social.href}
 //                         target="_blank"
 //                         rel="noopener noreferrer"
-//                         className="p-2 hover:text-primary-orange transition-colors"
+//                         className="p-2 hover:text-primary-blue transition-colors"
 //                         aria-label={social.name}
 //                       >
 //                         <Icon className="h-5 w-5" />

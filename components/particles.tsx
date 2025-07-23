@@ -30,7 +30,7 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
             },
           },
           color: {
-            value: '#ea580c',
+            value: '#0c5aeaff',
           },
           opacity: {
             value: 0.4,
@@ -52,7 +52,7 @@ export default function ParticlesComponent({ className }: ParticlesProps) {
           links: {
             enable: true,
             distance: 150,
-            color: '#ea580c',
+            color: '#0c5aeaff',
             opacity: 0.1,
             width: 1,
           },

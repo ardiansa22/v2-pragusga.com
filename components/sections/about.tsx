@@ -23,24 +23,18 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">
-                About <span className="text-primary-orange">Me</span>
+                About <span className="text-primary-blue">Me</span>
               </h2>
               <div className="text-lg text-muted-foreground space-y-4">
                 <p>
                   Hi! I'm{' '}
-                  <span className="text-primary-orange font-semibold">
-                    Taufik Pragusga
+                  <span className="text-primary-blue font-semibold">
+                    Ferian Ardiansa Junardi
                   </span>
-                  , a passionate software engineer with a keen eye for detail
-                  and a drive for creating impactful solutions. With expertise
-                  in both frontend and backend development, I bring ideas to
-                  life through clean, efficient code.
+                  , a web developer and data enthusiast passionate about building smart and impactful digital solutions. I have hands-on experience in crafting web apps using Laravel, React, and Next.js.
                 </p>
                 <p>
-                  My journey in tech has equipped me with a diverse skill set
-                  and the ability to tackle complex challenges head-on. I
-                  believe in writing maintainable code that scales and delivers
-                  exceptional user experiences.
+                  I've worked on projects ranging from tourism dashboards to disease monitoring systems with machine learning. I enjoy turning complex problems into clean, user-friendly interfaces while ensuring scalable backend performance.
                 </p>
               </div>
             </div>
@@ -48,14 +42,14 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square relative shine-border">
                 <Image
-                  src="/logo.png"
-                  alt="Logo"
+                  src="/ferian.png"
+                  alt="ferian"
                   fill
                   className="object-contain p-3"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-orange/10 to-transparent rounded-full animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/10 to-transparent rounded-full animate-pulse" />
             </div>
           </div>
         </motion.div>

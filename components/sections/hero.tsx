@@ -7,16 +7,16 @@ import { Download, ArrowRight, Github, Twitter, Linkedin } from 'lucide-react';
 import Particles from '@/components/particles';
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/pragusga25' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/Ferian25' },
   {
     name: 'X (Twitter)',
     icon: Twitter,
-    href: 'https://twitter.com/pragusga',
+    href: 'https://twitter.com/Ferian',
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/in/pragusga',
+    href: 'https://linkedin.com/in/Ferian',
   },
 ];
 
@@ -35,7 +35,7 @@ export default function Hero() {
           className="space-y-8"
         >
           <div className="text-4xl md:text-6xl font-bold">
-            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-orange-400 leading-tight">
+            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 leading-tight">
               Transforming Ideas into
               <br />
               Digital Reality
@@ -60,9 +60,9 @@ export default function Hero() {
           >
             <Button
               size="lg"
-              className="bg-orange-600 hover:bg-orange-700 resume-btn"
+              className="bg-blue-600 hover:bg-blue-700 resume-btn"
               onClick={() =>
-                window.open('/Taufik_Pragusga_Resume.pdf', '_blank')
+                window.open('/Taufik_Ferian_Resume.pdf', '_blank')
               }
             >
               <Download className="mr-2 h-4 w-4" />
@@ -72,7 +72,7 @@ export default function Hero() {
               size="lg"
               variant="outline"
               asChild
-              className="border-beam group hover:text-orange-600 transition-colors"
+              className="border-beam group hover:text-blue-600 transition-colors"
             >
               <a href="#contact">
                 Let's Talk
@@ -95,7 +95,7 @@ export default function Hero() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary-orange transform hover:scale-110 transition-all"
+                  className="text-muted-foreground hover:text-primary-blue transform hover:scale-110 transition-all"
                   aria-label={social.name}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}

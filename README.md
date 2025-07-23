@@ -1,1 +1,1 @@
-https://v2.pragusga.com
+https://v2.Ferian.com

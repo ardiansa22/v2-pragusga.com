@@ -91,18 +91,18 @@ const ProjectCarousel = ({
         <Button
           variant="ghost"
           size="icon"
-          className="h-8 w-8 rounded-full bg-background/80 hover:bg-background border border-primary-orange/50 hover:border-primary-orange"
+          className="h-8 w-8 rounded-full bg-background/80 hover:bg-background border border-primary-blue/50 hover:border-primary-blue"
           onClick={scrollPrev}
         >
-          <ArrowLeft className="h-4 w-4 text-primary-orange" />
+          <ArrowLeft className="h-4 w-4 text-primary-blue" />
         </Button>
         <Button
           variant="ghost"
           size="icon"
-          className="h-8 w-8 rounded-full bg-background/80 hover:bg-background border border-primary-orange/50 hover:border-primary-orange"
+          className="h-8 w-8 rounded-full bg-background/80 hover:bg-background border border-primary-blue/50 hover:border-primary-blue"
           onClick={scrollNext}
         >
-          <ArrowRight className="h-4 w-4 text-primary-orange" />
+          <ArrowRight className="h-4 w-4 text-primary-blue" />
         </Button>
       </div>
 
@@ -115,8 +115,8 @@ const ProjectCarousel = ({
             className={`h-1.5 rounded-full transition-all duration-300 
               ${
                 selectedIndex === dotIndex
-                  ? 'w-3 bg-primary-orange'
-                  : 'w-1.5 bg-primary-orange/50 hover:bg-primary-orange'
+                  ? 'w-3 bg-primary-blue'
+                  : 'w-1.5 bg-primary-blue/50 hover:bg-primary-blue'
               }`}
             aria-label={`Go to slide ${dotIndex + 1}`}
           />
@@ -156,7 +156,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 hover:border-primary-orange/50 group">
+              <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 hover:border-primary-blue/50 group">
                 <ProjectCarousel
                   images={project.images}
                   title={project.title}
@@ -164,7 +164,7 @@ const Projects = () => {
                 />
 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-orange transition-colors">
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-blue transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground mb-4">
@@ -175,7 +175,7 @@ const Projects = () => {
                     {project.techStack.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-primary-orange/10 text-primary-orange rounded-full text-sm"
+                        className="px-3 py-1 bg-primary-blue/10 text-primary-blue rounded-full text-sm"
                       >
                         {tech}
                       </span>
@@ -187,7 +187,7 @@ const Projects = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 min-w-[140px] hover:bg-primary-orange hover:text-white border-primary-orange/50"
+                        className="flex-1 min-w-[140px] hover:bg-primary-blue hover:text-white border-primary-blue/50"
                         asChild
                       >
                         <a
@@ -204,7 +204,7 @@ const Projects = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 min-w-[140px] hover:bg-primary-orange hover:text-white border-primary-orange/50"
+                        className="flex-1 min-w-[140px] hover:bg-primary-blue hover:text-white border-primary-blue/50"
                         asChild
                       >
                         <a
@@ -234,7 +234,7 @@ const Projects = () => {
             <Button
               variant="outline"
               onClick={() => setShowAll(!showAll)}
-              className="group border-primary-orange/50 hover:bg-primary-orange hover:text-white"
+              className="group border-primary-blue/50 hover:bg-primary-blue hover:text-white"
             >
               {showAll ? (
                 <>

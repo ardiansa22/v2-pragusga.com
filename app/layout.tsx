@@ -14,62 +14,62 @@ import { ChatBot } from '@/components/chat-bot';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Taufik Pragusga | Software Engineer',
+  title: 'Taufik Ferian | Software Engineer',
   description:
-    'Professional portfolio of Taufik Pragusga, a software engineer specializing in full-stack development',
+    'Professional portfolio of Taufik Ferian, a software engineer specializing in full-stack development',
   keywords: [
-    'Taufik Pragusga',
+    'Taufik Ferian',
     'software engineer',
     'full-stack developer',
     'web development',
     'portfolio',
   ],
-  authors: [{ name: 'Taufik Pragusga' }],
+  authors: [{ name: 'Taufik Ferian' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://pragusga.com',
-    title: 'Taufik Pragusga | Software Engineer',
+    url: 'https://Ferian.com',
+    title: 'Taufik Ferian | Software Engineer',
     description:
-      'Professional portfolio of Taufik Pragusga, a software engineer specializing in full-stack development',
-    siteName: 'Taufik Pragusga Portfolio',
+      'Professional portfolio of Taufik Ferian, a software engineer specializing in full-stack development',
+    siteName: 'Taufik Ferian Portfolio',
     images: [
       {
         url: Banner.src,
         width: 1200,
         height: 630,
-        alt: 'Taufik Pragusga - Software Engineer',
+        alt: 'Taufik Ferian - Software Engineer',
       },
     ],
     countryName: 'Indonesia',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taufik Pragusga | Software Engineer',
+    title: 'Taufik Ferian | Software Engineer',
     description:
-      'Professional portfolio of Taufik Pragusga, a software engineer specializing in full-stack development',
-    creator: '@pragusga',
+      'Professional portfolio of Taufik Ferian, a software engineer specializing in full-stack development',
+    creator: '@Ferian',
     images: [
       {
         url: Banner.src,
         width: 1200,
         height: 630,
-        alt: 'Taufik Pragusga - Software Engineer',
+        alt: 'Taufik Ferian - Software Engineer',
       },
     ],
   },
   viewport: 'width=device-width, initial-scale=1.0',
-  abstract: 'Professional portfolio of Taufik Pragusga',
-  applicationName: 'Taufik Pragusga Portfolio',
+  abstract: 'Professional portfolio of Taufik Ferian',
+  applicationName: 'Taufik Ferian Portfolio',
   category: 'Software Engineer',
   colorScheme: 'light dark',
-  metadataBase: new URL('https://pragusga.com'),
+  metadataBase: new URL('https://Ferian.com'),
   themeColor: '#ea580c',
-  creator: 'Taufik Pragusga',
+  creator: 'Taufik Ferian',
   alternates: {
-    canonical: 'https://v0.pragusga.com',
+    canonical: 'https://v0.Ferian.com',
   },
-  publisher: 'Taufik Pragusga',
+  publisher: 'Taufik Ferian',
   referrer: 'no-referrer',
 };
 

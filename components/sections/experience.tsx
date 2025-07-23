@@ -42,20 +42,20 @@ const Experience = () => {
                 <Card
                   className={`p-6 hover:shadow-lg transition-all duration-300 ${
                     experience.current
-                      ? 'border-primary-orange bg-primary-orange/5 hover:bg-primary-orange/10'
-                      : 'hover:border-primary-orange/50'
+                      ? 'border-primary-blue bg-primary-blue/5 hover:bg-primary-blue/10'
+                      : 'hover:border-primary-blue/50'
                   }`}
                 >
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div className="mb-2 md:mb-0">
                       <h3 className="text-xl font-semibold flex flex-wrap gap-2 items-center">
                         {experience.title}
-                        <span className="text-primary-orange">@</span>
+                        <span className="text-primary-blue">@</span>
                         {experience.company}
                         {experience.current && (
                           <Badge
                             variant="default"
-                            className="ml-2 bg-primary-orange hover:bg-primary-orange-dark"
+                            className="ml-2 bg-primary-blue hover:bg-primary-blue-dark"
                           >
                             Current
                           </Badge>
@@ -101,7 +101,7 @@ const Experience = () => {
             <Button
               variant="outline"
               onClick={() => setShowAll(!showAll)}
-              className="group border-primary-orange/50 hover:bg-primary-orange hover:text-white"
+              className="group border-primary-blue/50 hover:bg-primary-blue hover:text-white"
             >
               {showAll ? (
                 <>

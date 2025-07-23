@@ -73,11 +73,11 @@ export function ChatBot() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'fixed h-12 w-12 rounded-full shadow-lg bg-primary-orange hover:bg-primary-orange-dark z-50 right-7 bottom-24 transform transition-transform',
+          'fixed h-12 w-12 rounded-full shadow-lg bg-primary-blue hover:bg-primary-blue-dark z-50 right-7 bottom-24 transform transition-transform',
           goToTopVisible ? 'translate-y-0' : 'translate-y-12',
           // Pulsing animation when closed
           !isOpen &&
-            'after:absolute after:inset-0 after:rounded-full after:border-2 after:border-primary-orange/50 after:animate-ping'
+            'after:absolute after:inset-0 after:rounded-full after:border-2 after:border-primary-blue/50 after:animate-ping'
         )}
         size="icon"
       >
@@ -105,14 +105,14 @@ export function ChatBot() {
           >
             <Card
               className={cn(
-                'border-primary-orange/20',
+                'border-primary-blue/20',
                 isMobile && 'h-full rounded-b-none'
               )}
             >
               {/* Header */}
-              <div className="p-4 border-b flex items-center justify-between bg-primary-orange/5">
+              <div className="p-4 border-b flex items-center justify-between bg-primary-blue/5">
                 <div className="flex items-center gap-2">
-                  <Bot className="h-5 w-5 text-primary-orange" />
+                  <Bot className="h-5 w-5 text-primary-blue" />
                   <h3 className="font-semibold">Virtual Assistant</h3>
                 </div>
                 {isMobile && (
@@ -120,7 +120,7 @@ export function ChatBot() {
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsOpen(false)}
-                    className="h-8 w-8 rounded-full hover:bg-primary-orange/10"
+                    className="h-8 w-8 rounded-full hover:bg-primary-blue/10"
                   >
                     <X className="h-4 w-4" />
                     <span className="sr-only">Close chat</span>
@@ -149,7 +149,7 @@ export function ChatBot() {
                         className={cn(
                           'flex w-max max-w-[80%] flex-col gap-2 rounded-lg px-3 py-2 text-sm break-words',
                           message.role === 'user'
-                            ? 'ml-auto bg-primary-orange text-white'
+                            ? 'ml-auto bg-primary-blue text-white'
                             : 'bg-muted'
                         )}
                       >
@@ -178,7 +178,7 @@ export function ChatBot() {
                   type="submit"
                   size="icon"
                   disabled={isLoading || !input.trim()}
-                  className="bg-primary-orange hover:bg-primary-orange-dark"
+                  className="bg-primary-blue hover:bg-primary-blue-dark"
                 >
                   {isLoading ? (
                     <Loader2 className="h-4 w-4 animate-spin" />

@@ -43,7 +43,7 @@ export function GoToTop() {
           <Button
             onClick={scrollToTop}
             size="icon"
-            className="rounded-full bg-primary-orange hover:bg-primary-orange-dark shadow-lg"
+            className="rounded-full bg-primary-blue hover:bg-primary-blue-dark shadow-lg"
           >
             <ArrowUp className="h-5 w-5" />
           </Button>
