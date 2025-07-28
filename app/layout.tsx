@@ -14,38 +14,38 @@ import { ChatBot } from '@/components/chat-bot';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Taufik Ferian | Software Engineer',
+  title: 'Ferian | Software Engineer',
   description:
-    'Professional portfolio of Taufik Ferian, a software engineer specializing in full-stack development',
+    'Professional portfolio of Ferian, a software engineer specializing in full-stack development',
   keywords: [
-    'Taufik Ferian',
+    'Ferian',
     'software engineer',
     'full-stack developer',
     'web development',
     'portfolio',
   ],
-  authors: [{ name: 'Taufik Ferian' }],
+  authors: [{ name: 'Ferian' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://Ferian.com',
-    title: 'Taufik Ferian | Software Engineer',
+    title: 'Ferian | Software Engineer',
     description:
-      'Professional portfolio of Taufik Ferian, a software engineer specializing in full-stack development',
+      'Professional portfolio of Ferian, a software engineer specializing in full-stack development',
     siteName: 'Taufik Ferian Portfolio',
     images: [
       {
         url: Banner.src,
         width: 1200,
         height: 630,
-        alt: 'Taufik Ferian - Software Engineer',
+        alt: 'Ferian - Software Engineer',
       },
     ],
     countryName: 'Indonesia',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taufik Ferian | Software Engineer',
+    title: 'Ferian | Software Engineer',
     description:
       'Professional portfolio of Taufik Ferian, a software engineer specializing in full-stack development',
     creator: '@Ferian',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://v0.Ferian.com',
   },
-  publisher: 'Taufik Ferian',
+  publisher: 'Ferian',
   referrer: 'no-referrer',
 };
 
@@ -93,7 +93,6 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <GoToTop />
-          <ChatBot />
           <Toaster />
         </ThemeProvider>
       </body>
