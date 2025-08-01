@@ -10,6 +10,7 @@ import { ScrollProgress } from '@/components/scroll-progress';
 import Banner from '../public/bannerp.jpeg';
 import { Analytics } from '@vercel/analytics/react';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
