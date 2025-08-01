@@ -9,7 +9,6 @@ import { Toaster } from '@/components/ui/toaster';
 import { ScrollProgress } from '@/components/scroll-progress';
 import Banner from '../public/bannerp.jpeg';
 import { Analytics } from '@vercel/analytics/react';
-import { ChatBot } from '@/components/chat-bot';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -62,7 +62,7 @@ export default function Hero() {
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 resume-btn"
               onClick={() =>
-                window.open('/Taufik_Ferian_Resume.pdf', '_blank')
+                window.open('/Ferian_Resume.pdf', '_blank')
               }
             >
               <Download className="mr-2 h-4 w-4" />
