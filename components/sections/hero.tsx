@@ -36,9 +36,9 @@ export default function Hero() {
         >
           <div className="text-4xl md:text-6xl font-bold">
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 leading-tight">
-              Transforming Ideas into
+              Empowering Intelligence,
               <br />
-              Digital Reality
+              Building the Future
             </h1>
           </div>
 
@@ -48,8 +48,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Full-stack developer crafting elegant solutions to complex problems.
-            Let's build something extraordinary together.
+            AI Engineer and Fullstack Developer passionate about turning data into insight and code into impact. Let’s shape tomorrow’s technology together.
           </motion.p>
 
           <motion.div

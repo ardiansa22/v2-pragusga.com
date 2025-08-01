@@ -1,17 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Twitter, Linkedin,Instagram } from 'lucide-react';
 import Particles from '@/components/particles';
 import Link from 'next/link';
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/Ferian25' },
-  { name: 'X (Twitter)', icon: Twitter, href: 'https://twitter.com/Ferian' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ardiansa22' },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ardiansaferian' },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/in/Ferian',
+    href: 'https://www.linkedin.com/in/ferian-ardiansa-junardi-82a8a0269/',
   },
 ];
 

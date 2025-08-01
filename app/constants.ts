@@ -59,40 +59,59 @@ export const PROJECTS = [
       'An NLP project focused on extracting medical entities from patient-doctor consultation transcripts in Bahasa Indonesia. Leveraging IndoBERT and manually annotated data, the model identifies relevant symptom-related entities to aid medical data processing.',
     images: ['/ner1.jpg', '/ner2.jpg'],
     techStack: ['React', 'Tailwind', 'Flask', 'Python', 'HuggingFace','FastAPI','Pytorch'],
-    liveDemo: 'https://pomodoro.Ferian.com',
-    sourceCode: 'https://github.com/Ferian25/pomodoro',
+    liveDemo: '#',
+    sourceCode: 'https://huggingface.co/Ferian22/IdobertNerMedical',
     carouselDelay: 5300,
   },
-  // {
-  //   title: 'Compass360: Multi-Rater Feedback System',
-  //   description:
-  //     'A 360-degree employee assessment system designed to collect performance evaluations from peers, supervisors, subordinates, and self-assessment. The system generates insights such as Level of Achievement (LoA), competency gaps, and other key performance indicators to support individual and organizational development.',
-  //   images: [
-  //     '/rev0.jpeg',
-  //     '/rev1.jpeg',
-  //     '/rev2.jpeg',
-  //     '/rev5.jpeg',
-  //     '/rev3.jpeg',
-  //     '/rev4.jpeg',
-  //   ],
-  //   techStack: [
-  //     'Laravel',
-  //     'Mysql',
-  //     'Javascript',
-  //     'Bootstrap Css',
-  //   ],
-  //   liveDemo: 'https://resume-reviewer.Ferian.com',
-  //   sourceCode: 'https://github.com/Ferian25/ai-resume-reviewer',
-  //   carouselDelay: 4500, // 3 seconds
-  // },
+  {
+    title: 'Compass360: Multi-Rater Feedback System',
+    description:
+      'A 360-degree employee assessment system designed to collect performance evaluations from peers, supervisors, subordinates, and self-assessment. The system generates insights such as Level of Achievement (LoA), competency gaps, and other key performance indicators to support individual and organizational development.',
+    images: [
+      '/bp1.jpg',
+      '/bp2.jpg',
+      '/bp3.jpg',
+    ],
+    techStack: [
+      'Laravel',
+      'Mysql',
+      'Javascript',
+      'Bootstrap Css',
+    ],
+    liveDemo: 'https://360degree-binapotensiaindonesia.com/',
+    sourceCode: 'https://github.com/mrizkyn/ams360',
+    carouselDelay: 4500, // 3 seconds
+  },
+  {
+    title: 'Cerebook – Online Book Rental & Store Platform',
+    description:
+      'Cerebook is a dynamic and interactive web application that allows users to rent or purchase books online. The platform offers real-time stock updates, responsive UI, and seamless transactions to enhance the digital reading experience.',
+    images: [
+      '/cere5.jpg',
+      '/bk1.jpg',
+      '/cere6.jpg',
+    ],
+    techStack: [
+      'Livewire',
+      'Mysql',
+      'Javascript',
+      'Tailwind Css',
+      'Flux UI',
+      'PWA',
+      'Payment Gateway',
+    ],
+    liveDemo: 'https://github.com/ardiansa22/cerebook/',
+    sourceCode: 'https://matapangandaran.my.id/',
+    carouselDelay: 4500, // 3 seconds
+  },
   {
     title: 'EduTourism Village Platform',
     description:
       'A tourism web application focused on promoting educational village tourism. Designed for visitors who seek not only leisure but also learning experiences — including academic research, field studies, and community service (KKN). The platform helps connect researchers, students, and local tourism managers through structured data, service listings, and collaboration features.',
     images: ['/amatrip2.jpg', '/amatrip1.jpg', '/amatrip3.jpg'],
     techStack: ['Laravel', 'Mysql', 'Javascript', 'Bootstrap Css', 'PWA','Payment Gateway'],
-    liveDemo: 'https://adhan.Ferian.com',
-    sourceCode: 'https://github.com/Ferian25/adhan',
+    liveDemo: 'https://amatrip.my.id/',
+    sourceCode: '#',
     carouselDelay: 6000, // 6 seconds
   },
   {
@@ -101,7 +120,7 @@ export const PROJECTS = [
       'A geospatial dashboard for tracking eye disease cases in Pangandaran, Indonesia. The system leverages K-Means and DBSCAN algorithms to cluster affected regions and provides visualization tools for health officials to monitor trends and prioritize intervention areas.',
     images: ['/mata1.jpg', '/mata2.jpg'],
     techStack: ['Flask', 'Python', 'Plotly.js','Streamlit'],
-    liveDemo: 'https://wm.Ferian.com',
+    liveDemo: 'https://matapangandaran.com',
     carouselDelay: 5500, // 3 seconds
   },
   {
@@ -110,17 +129,17 @@ export const PROJECTS = [
       'A custom Electronic Medical Record (EMR) system developed for So Medika Clinic, fully integrated with Indonesia`s SATU SEHAT platform. This web-based system supports patient data management, clinical documentation, and ensures standardized data interoperability with national health systems.',
     images: ['/resonance-banner.png', '/resonance-banner-1.png'],
     techStack: ['Laravel', 'Mysql', 'Javascript', 'Bootstrap Css'],
-    liveDemo: 'https://resonance.Ferian.com',
+    liveDemo: '#',
     carouselDelay: 4000, // 4 seconds
   },
   {
     title: 'Weather Data Analysis Dashboard ',
     description:
       'A weather data analysis project built as part of the Bangkit Academy final assignment on Dicoding. The dashboard visualizes historical weather patterns using Python and Streamlit, highlighting temperature, humidity, wind speed, and their correlation with bike rentals. It demonstrates skills in data cleaning, visualization, and insight generation.',
-    images: ['/snake.jpeg', '/snake2.jpeg'],
+    images: ['/bike1.jpg', '/bike2.jpg'],
     techStack: ['Streamlit', 'Python','Pandas','Matplotlib'],
-    sourceCode: 'https://github.com/Ferian25/snake',
-    liveDemo: 'https://snake.Ferian.com',
+    sourceCode: 'https://github.com/ardiansa22/bike_rentals_monitoring',
+    liveDemo: 'https://matapangandaran-com.streamlit.app/',
     carouselDelay: 5000, // 5 seconds
   }
 ];
