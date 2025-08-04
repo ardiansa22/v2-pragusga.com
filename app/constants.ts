@@ -7,9 +7,16 @@ export const EXPERIENCES = [
     type: `Internship`,
     current: false,
     responsibilities: [
-      `Mengembangkan aplikasi web penyewaan buku menggunakan Laravel dan Livewire v3 yang terintegrasi dengan sistem notifikasi dan manajemen penyewaan berbasis pengguna, melayani X jumlah pengguna aktif harian/bulanan.`,
-      `Membangun fungsionalitas pencarian real-time yang meningkatkan kecepatan pencarian rata-rata sebesar 0.5 detik dan sistem notifikasi yang meningkatkan engagement pengguna sebesar Y%`,
-      `Berpartisipasi aktif dalam Agile sprints, berkontribusi pada fitur backend dan frontend, serta mengimplementasikan kode yang teroptimasi performa, mengurangi waktu loading halaman utama sebesar Z%`,
+      `mengembangkan aplikasi web peminjaman buku yang 
+komprehensif menggunakan Laravel dan Livewire v3, meningkatkan efisiensi 
+operasional`,
+      `Merancang dan mengimplementasikan fungsionalitas inti seperti pencarian 
+real-time, manajemen peminjaman berbasis pengguna, dan sistem notifikasi 
+otomatis, meningkatkan pengalaman pengguna dan mengurangi manual 
+effort`,
+      `Berkontribusi aktif dalam sprint Agile, menerapkan praktik kode bersih, 
+melakukan pengujian ekstensif, dan mengoptimalkan performa aplikasi untuk 
+skalabilitas dan responsivitas`,
     ],
   },
   {
