@@ -134,7 +134,7 @@ export const PROJECTS = [
     title: 'So Medika Electronic Medical Record System',
     description:
       'A custom Electronic Medical Record (EMR) system developed for So Medika Clinic, fully integrated with Indonesia`s SATU SEHAT platform. This web-based system supports patient data management, clinical documentation, and ensures standardized data interoperability with national health systems.',
-    images: ['/resonance-banner.png', '/resonance-banner-1.png'],
+    images: ['/somedika.jpg'],
     techStack: ['Laravel', 'Mysql', 'Javascript', 'Bootstrap Css'],
     liveDemo: '#',
     carouselDelay: 4000, // 4 seconds
